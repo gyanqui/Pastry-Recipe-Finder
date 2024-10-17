@@ -1,8 +1,7 @@
 # Parcel cache
 .parcel-cache
 
-
-dist
-
+# Dependency directories
 node_modules/
 
+dist
