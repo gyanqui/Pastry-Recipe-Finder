@@ -40,4 +40,6 @@ function App() {
   return createElement('div', {}, [Header(main), main, Footer()]);
 }
 
+document.getElementById('root').appendChild(App());
+
 export default App;
