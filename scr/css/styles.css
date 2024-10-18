@@ -40,7 +40,8 @@ header {
   align-items: center;
 }
 
-.title-heading, h2 {
+.title-heading,
+h2 {
   text-align: center;
 }
 
@@ -49,12 +50,11 @@ header {
   padding: 0 25px;
 }
 
-.recipe-card h4, .category-group h3 {
+.recipe-card h4,
+.category-group h3 {
   font-size: 1.3rem;
   text-align: center;
 }
-
-
 
 footer {
   text-align: center;
