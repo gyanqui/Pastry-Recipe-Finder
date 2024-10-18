@@ -1,7 +1,5 @@
 import { createElement } from './utils';
 import { initRouter } from './router';
-import HomeView from './HomeView';
-import CategoryView from './CategoryView';
 
 function Header(mainDiv) {
   const appTitle = createElement('h1', {
@@ -30,10 +28,40 @@ function Header(mainDiv) {
 
 function Footer() {
   const copyright = createElement('span', {
-    textContent: `Copyright © ${new Date().getFullYear()}`,
+    textContent: `© ${new Date().getFullYear()} PastryPal`,
   });
 
-  return createElement('footer', {}, [copyright]);
+  const footerP = createElement('p', {
+    textContent: 'All rights reserves',
+  });
+  const lastModification = createElement('p', {
+    textContent: `Last Modification: ${new Date().toLocaleString()}`,
+  });
+
+  const contactInfo = createElement('div', {}, [
+    createElement('p', { textContent: 'Contact Us' }),
+    createElement('p', { textContent: 'Phone: +51 916 165 703' }),
+    createElement('p', { textContent: 'Email: pastrypal@gmail.com' }),
+    createElement('p', {
+      textContent: 'Address: 6711 Abanto St, Carlsbad, CA 92009',
+    }),
+  ]);
+
+  const credit = createElement('p', {}, [
+    createElement('a', {
+      href: 'https://www.themealdb.com/',
+      textContent: 'Themealdb',
+      target: '_blank',
+    }),
+  ]);
+
+  return createElement('footer', {}, [
+    contactInfo,
+    credit,
+    copyright,
+    footerP,
+    lastModification,
+  ]);
 }
 
 function App() {

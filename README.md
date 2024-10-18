@@ -1,8 +1,8 @@
-
 # Pastry-Recipe-Finder
 
 ## Randomized production URL
- 👉 https://pastrypal.netlify.app/
+
+👉 https://pastrypal.netlify.app/
 
 ## Table of Contents
 
@@ -25,4 +25,5 @@ This is a university final project for course WDD 330 Web Frontend Development I
 - `npm run build` to build final files when you are ready to turn in.
 
 ## 👾 Collaborator
+
 - Gabriel Yanqui Alvarez

@@ -3,11 +3,19 @@ import { createElement } from './utils';
 import { getFeaturedRecipes, getCategoryRecipes } from './APIHandler';
 
 function HomeView() {
-  const title = createElement('h2', { textContent: 'Welcome to PastryPal' });
-  const intro = createElement('p', { textContent: 'Find the best pastry recipes based on your ingredients and dietary preferences.' });
+  const hero = createElement('img', {
+    src: './src/images/placeholder.png',
+    alt: 'PastryPal Hero Image',
+  });
+  const title = createElement('h2', { textContent: 'Get to Know US!' });
+  const intro = createElement('p', {
+    textContent:
+      "Welcome to PastryPal, your go-to source for delightful pastry recipes! Based in the heart of the baking community, PastryPal is dedicated to helping you discover the joy of homemade baked goods. From flaky croissants to rich, decadent cakes, our mission is to provide you with easy-to-follow recipes, sourced from renowned bakers and curated for every skill level. Whether you're a seasoned baker or just starting out, our collection features a variety of delicious options, including gluten-free, vegan, and classic pastries. At PastryPal, we believe that baking should be accessible, fun, and rewarding—a way to bring loved ones together, one pastry at a time. Come explore, create, and share the love of baking with us!",
+  });
 
-  const featuredSection = createElement('div', { className: 'featured-section' });
-  const featuredTitle = createElement('h3', { textContent: 'Featured Recipes' });
+  const featuredSection = createElement('div', {
+    className: 'featured-section',
+  });
 
   getFeaturedRecipes().then((recipes) => {
     // Randomly select up to 4 recipes
@@ -21,7 +29,7 @@ function HomeView() {
     featuredSection.append(...recipeList);
   });
 
-  return createElement('div', {}, [title, intro, featuredTitle, featuredSection]);
+  return createElement('div', {}, [hero, title, intro, featuredSection]);
 }
 
 export default HomeView;

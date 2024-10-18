@@ -1,55 +1,70 @@
+:root {
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-headline: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  /* colors */
+  --primary-color: #202c39;
+  --secondary-color: #283845;
+  --tertiary-color: #e3e7d3;
+  --light-grey: #bdc2bf;
+  --dark-grey: #4c5b52;
+  --accent-color: #305e43;
 
-  :root {
-    --font-body: Arial, Helvetica, sans-serif;
-    --font-headline: Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    /* colors */
-    --primary-color: #202C39;
-    --secondary-color: #283845;
-    --tertiary-color: #E3E7D3;
-    --light-grey: #BDC2BF;
-    --dark-grey: #4C5B52;
-    --accent-color: #305E43;
-  
-    /* sizes */
-    --font-base: 18px;
-    --small-font: 0.8em;
-    --large-font: 1.2em;
-  } 
+  /* sizes */
+  --font-base: 18px;
+  --small-font: 0.8em;
+  --large-font: 1.2em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--font-base);
+  color: var(--dark-grey);
+}
+
+img {
+  max-width: 100%;
+}
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 16px;
-  }
-  
-  nav {
-    display: flex;
-    gap: 8px;
-  }
-  
-  .counter-footer {
-    display: flex;
-    gap: 8px;
-  }
-  
-  .counter-button {
-    width: 64px;
-    height: 32px;
-    font-size: 24px;
-  }
-  
-  .counter-label {
-    display: block;
-    font-size: 32px;
-    background: #f7f7f7;
-    width: 136px;
-    padding: 4px;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-    text-align: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+.counter-footer {
+  display: flex;
+  gap: 8px;
+}
+
+.counter-button {
+  width: 64px;
+  height: 32px;
+  font-size: 24px;
+}
+
+.counter-label {
+  display: block;
+  font-size: 32px;
+  background: #f7f7f7;
+  width: 136px;
+  padding: 4px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  text-align: center;
+}
