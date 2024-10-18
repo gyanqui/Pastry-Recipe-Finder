@@ -4,13 +4,14 @@
   "description": "WDD330 final project",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "format": "prettier --write ."
   },
   "author": "Gabriel Yanqui",
   "dependencies": {
     "parcel": "^2.12.0"
   },
-  "main": "App.js",
   "devDependencies": {
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
