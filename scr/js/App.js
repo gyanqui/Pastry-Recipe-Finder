@@ -18,8 +18,12 @@ function Header(mainDiv) {
     href: '#/categories',
     textContent: 'Categories',
   });
+  const recipeLink = createElement('a', {
+    href: '#/recipes',
+    textContent: 'Recipes',
+  });
 
-  const nav = createElement('nav', {}, [homeLink, categoryLink]);
+  const nav = createElement('nav', {}, [homeLink, categoryLink, recipeLink]);
 
   return createElement('header', {}, [appTitle, nav]);
 }
@@ -39,5 +43,7 @@ function App() {
 
   return createElement('div', {}, [Header(main), main, Footer()]);
 }
+
+document.getElementById('root').appendChild(App());
 
 export default App;
