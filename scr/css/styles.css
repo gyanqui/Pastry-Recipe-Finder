@@ -28,6 +28,9 @@ body {
 
 img {
   max-width: 100%;
+  padding: 30px;
+  display: block;
+  margin: auto;
 }
 
 header {
@@ -36,6 +39,22 @@ header {
   align-items: center;
   align-items: center;
 }
+
+.title-heading, h2 {
+  text-align: center;
+}
+
+.intro-paragraph {
+  text-align: center;
+  padding: 0 25px;
+}
+
+.recipe-card h4, .category-group h3 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+
 
 footer {
   text-align: center;
