@@ -1,6 +1,6 @@
 // Updating the home view to include featured recipes
 import { createElement } from './utils';
-import { getFeaturedRecipes, getCategoryRecipes } from './APIHandler';
+import { getFeaturedRecipes } from './APIHandler';
 
 function HomeView() {
   const hero = createElement('img', {

@@ -6,8 +6,16 @@ import prettierConfig from 'eslint-config-prettier';
 export default [
   {
     languageOptions: {
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        module: 'readonly',
+        define: 'readonly',
+        exports: 'readonly',
+        require: 'readonly',
+        importScripts: 'readonly',
+      },
     },
+    ignores: ['dist/'], // Ignore the 'dist' folder
   },
   pluginJs.configs.recommended,
   {

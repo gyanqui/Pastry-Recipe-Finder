@@ -1,7 +1,7 @@
 import { createElement } from './utils';
 import { initRouter } from './router';
 
-function Header(mainDiv) {
+function Header() {
   const appTitle = createElement('h1', {
     textContent: 'PastryPal',
     className: 'heading',
