@@ -10,7 +10,7 @@
   "dependencies": {
     "parcel": "^2.12.0"
   },
-  "main": "index.js",
+  "main": "App.js",
   "devDependencies": {
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
