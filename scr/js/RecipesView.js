@@ -2,7 +2,7 @@ import { createElement } from './utils';
 import { getFeaturedRecipes, getRecipeDetails } from './APIHandler';
 
 function RecipesView() {
-  const title = createElement('h2', { textContent: 'All Recipes' });
+  const title = createElement('h2', { textContent: 'Explore All Our Recipes' });
   const recipesSection = createElement('div', { className: 'recipes-section' });
 
   getFeaturedRecipes().then((recipes) => {
@@ -25,6 +25,10 @@ function RecipesView() {
             src: recipe.strMealThumb,
             alt: recipe.strMeal,
             style: 'max-width: 200px; height: auto;',
+          }),
+          createElement('p', {
+            textContent: 'Ingredients: ' ,
+            className: 'ingredientH',
           }),
           createElement(
             'ul',

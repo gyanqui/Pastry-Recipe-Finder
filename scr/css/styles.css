@@ -23,7 +23,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--font-base);
-  color: var(--dark-grey);
+  color: var(--primary-color);
 }
 
 img {
@@ -48,11 +48,12 @@ h2 {
 .intro-paragraph {
   text-align: center;
   padding: 0 25px;
+  color: var(--dark-grey);
 }
 
 .recipe-card h4,
 .category-group h3 {
-  font-size: 1.3rem;
+  font-size: var(--large-font);
   text-align: center;
 }
 
@@ -67,6 +68,27 @@ nav {
 }
 
 /* STYLES FOR THE RECIPE VIEW PAGE */
+
+.recipe-card {
+  text-align: center;
+}
+
+.recipe-card img {
+  display: block;
+  margin: auto;
+  padding: 0;
+}
+
+.recipe-card ul {
+  text-align: left;
+  margin: 10px 100px;
+  color: var(--dark-grey);
+}
+
+.recipe-instructions {
+  padding: 10px 40px;
+  color: var(--dark-grey);
+}
 
 .counter-footer {
   display: flex;
