@@ -1,6 +1,8 @@
-// CategoryView to list available recipe categories
+// CategoryView.js
 import { createElement } from './utils';
 import { getFeaturedRecipes, getRecipeDetails } from './APIHandler';
+import SugarTreatsView from './SugarTreatsView';
+import FreeSugarView from './FreeSugarView'; // Import FreeSugarView
 
 function CategoryView() {
   const title = createElement('h2', { textContent: 'Recipe Categories' });
@@ -36,6 +38,7 @@ function CategoryView() {
         { name: 'Free Sugar', categories: groupedCategories.withoutSugar },
       ];
 
+      // Display both "Sugar Treats" and "Free Sugar" categories
       categoryGroups.forEach((group) => {
         if (group.categories.length > 0) {
           const groupTitle = createElement('h3', { textContent: group.name });
@@ -49,6 +52,18 @@ function CategoryView() {
             { className: 'category-group' },
             [groupTitle, groupImage]
           );
+
+          // Event listeners to navigate to the appropriate views
+          if (group.name === 'Sugar Treats') {
+            groupContainer.addEventListener('click', () => {
+              SugarTreatsView(group.categories, group.name);
+            });
+          } else if (group.name === 'Free Sugar') {
+            groupContainer.addEventListener('click', () => {
+              FreeSugarView(group.categories, group.name);
+            });
+          }
+
           categorySection.appendChild(groupContainer);
         }
       });
