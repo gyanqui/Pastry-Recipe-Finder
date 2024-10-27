@@ -2,6 +2,7 @@
 import { createElement } from './utils';
 import HomeView from './HomeView';
 import CategoryView from './CategoryView';
+import RecipeView from './RecipesView';
 
 export function initRouter(mainView) {
   function updateView(newView) {
@@ -16,6 +17,9 @@ export function initRouter(mainView) {
         break;
       case '#/categories':
         updateView(CategoryView());
+        break;
+      case '#/recipes':
+        updateView(RecipeView());
         break;
       default:
         updateView(createElement('h3', { textContent: '404 Page Not Found' }));
