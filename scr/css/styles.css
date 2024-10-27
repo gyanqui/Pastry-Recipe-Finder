@@ -66,6 +66,8 @@ nav {
   gap: 8px;
 }
 
+/* STYLES FOR THE RECIPE VIEW PAGE */
+
 .counter-footer {
   display: flex;
   gap: 8px;

@@ -1,4 +1,3 @@
-// FreeSugar.js
 import { createElement } from './utils';
 
 function FreeSugarView(recipes, categoryName) {
@@ -12,10 +11,8 @@ function FreeSugarView(recipes, categoryName) {
     recipeList.appendChild(listItem);
   });
 
-  // Render FreeSugarView in the root element
   const root = document.getElementById('root');
-  root.innerHTML = ''; // Clear current view
-
+  root.innerHTML = '';
   root.appendChild(
     createElement('div', { className: 'recipe-list-view' }, [title, recipeList])
   );

@@ -1,4 +1,4 @@
-// API Handler updates to get featured and category recipes
+// API Handler
 
 export async function getFeaturedRecipes() {
   const response = await fetch(

@@ -1,4 +1,3 @@
-// Updating the router to include the new HomeView and CategoryView
 import { createElement } from './utils';
 import HomeView from './HomeView';
 import CategoryView from './CategoryView';

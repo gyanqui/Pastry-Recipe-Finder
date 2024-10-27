@@ -1,4 +1,3 @@
-// Updating the home view to include featured recipes
 import { createElement } from './utils';
 import { getFeaturedRecipes } from './APIHandler';
 
