@@ -4,7 +4,7 @@ import { getFeaturedRecipes } from './APIHandler';
 
 function HomeView() {
   const hero = createElement('img', {
-    src: './src/images/placeholder.png',
+    src: 'src/images/placeholder.png',
     alt: 'PastryPal Hero Image',
   });
   const title = createElement('h2', {
