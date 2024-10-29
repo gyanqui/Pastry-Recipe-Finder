@@ -192,6 +192,11 @@ nav {
   border-radius: 5px;
 }
 
+.explore-button:hover {
+  background-color: var(--primary-color);
+  color: var(--light-grey);
+}
+
 /* Navigation */
 header {
   flex-direction: column;
