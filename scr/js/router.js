@@ -1,6 +1,6 @@
 import { createElement } from './utils';
 import HomeView from './HomeView';
-import FavoriteRecipesView from './CategoryView.js';
+import FavoriteRecipesView from './FavoritesView.js';
 import RecipeView from './RecipesView';
 
 export function initRouter(mainView) {

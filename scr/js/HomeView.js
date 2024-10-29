@@ -6,6 +6,7 @@ function HomeView() {
   const hero = createElement('img', {
     src: heroImg,
     alt: 'PastryPal Hero Image',
+    className: 'hero',
   });
   const title = createElement('h2', {
     textContent: 'Get to Know US!',
