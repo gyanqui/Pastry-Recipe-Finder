@@ -18,7 +18,7 @@ function Header() {
   });
   const favoriterecipesLink = createElement('a', {
     href: '#/favoriterecipes',
-    textContent: 'Favorite Recipes',
+    textContent: 'Favorites',
   });
 
   const nav = createElement('nav', {}, [

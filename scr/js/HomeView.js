@@ -1,9 +1,10 @@
 import { createElement } from './utils';
 import { getFeaturedRecipes } from './APIHandler';
+import heroImg from '../images/hero_path.jpg';
 
 function HomeView() {
   const hero = createElement('img', {
-    src: 'src/images/hero_path.jpg',
+    src: heroImg,
     alt: 'PastryPal Hero Image',
   });
   const title = createElement('h2', {
