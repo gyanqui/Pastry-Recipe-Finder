@@ -21,7 +21,11 @@ function Header() {
     textContent: 'Favorite Recipes',
   });
 
-  const nav = createElement('nav', {}, [homeLink, recipeLink, favoriterecipesLink]);
+  const nav = createElement('nav', {}, [
+    homeLink,
+    recipeLink,
+    favoriterecipesLink,
+  ]);
 
   return createElement('header', {}, [appTitle, nav]);
 }

@@ -1,6 +1,5 @@
 import { createElement } from './utils';
 
-
 function FavoriteRecipesView() {
   const title = createElement('h2', { textContent: 'Your Favorite Recipes' });
   const favoritesSection = createElement('div', {
@@ -26,7 +25,9 @@ function FavoriteRecipesView() {
   });
 
   if (favorites.length === 0) {
-    favoritesSection.appendChild(createElement('p', { textContent: 'Your favorite recipes list is empty' }));
+    favoritesSection.appendChild(
+      createElement('p', { textContent: 'Your favorite recipes list is empty' })
+    );
   }
 
   return createElement('div', {}, [title, favoritesSection]);

@@ -32,7 +32,7 @@ function RecipesView() {
             onclick: () => toggleFavorite(recipe),
           }),
           createElement('p', {
-            textContent: 'Ingredients: ' ,
+            textContent: 'Ingredients: ',
             className: 'ingredientH',
           }),
           createElement(
