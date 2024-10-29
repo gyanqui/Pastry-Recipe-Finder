@@ -9,7 +9,7 @@ function HomeView() {
     className: 'hero',
   });
   const title = createElement('h2', {
-    textContent: 'Get to Know US!',
+    textContent: 'Get to Know US',
     className: 'title-heading',
   });
   const intro = createElement('p', {
@@ -34,6 +34,13 @@ function HomeView() {
       createElement('div', { className: 'recipe-card' }, [
         createElement('h4', { textContent: recipe.strMeal }),
         createElement('img', { src: recipe.strMealThumb, alt: recipe.strMeal }),
+        createElement('button', {
+          textContent: 'Explore More',
+          className: 'explore-button',
+          onclick: () => {
+            window.location.hash = '#/recipes';
+          },
+        }),
       ])
     );
     featuredSection.append(...recipeList);
