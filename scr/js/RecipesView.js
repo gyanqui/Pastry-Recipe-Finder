@@ -26,8 +26,13 @@ function RecipesView() {
             alt: recipe.strMeal,
             style: 'max-width: 200px; height: auto;',
           }),
+          createElement('button', {
+            className: 'favorite-btn',
+            innerHTML: '&#10084;', // Heart icon
+            onclick: () => toggleFavorite(recipe),
+          }),
           createElement('p', {
-            textContent: 'Ingredients: ' ,
+            textContent: 'Ingredients: ',
             className: 'ingredientH',
           }),
           createElement(
@@ -49,6 +54,16 @@ function RecipesView() {
   });
 
   return createElement('div', {}, [title, recipesSection]);
+}
+
+function toggleFavorite(recipe) {
+  let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  if (favorites.some((fav) => fav.idMeal === recipe.idMeal)) {
+    favorites = favorites.filter((fav) => fav.idMeal !== recipe.idMeal);
+  } else {
+    favorites.push(recipe);
+  }
+  localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 export default RecipesView;

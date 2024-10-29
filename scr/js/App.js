@@ -12,16 +12,20 @@ function Header() {
     href: '#/home',
     textContent: 'Home',
   });
-  const categoryLink = createElement('a', {
-    href: '#/categories',
-    textContent: 'Categories',
-  });
   const recipeLink = createElement('a', {
     href: '#/recipes',
     textContent: 'Recipes',
   });
+  const favoriterecipesLink = createElement('a', {
+    href: '#/favoriterecipes',
+    textContent: 'Favorite Recipes',
+  });
 
-  const nav = createElement('nav', {}, [homeLink, categoryLink, recipeLink]);
+  const nav = createElement('nav', {}, [
+    homeLink,
+    recipeLink,
+    favoriterecipesLink,
+  ]);
 
   return createElement('header', {}, [appTitle, nav]);
 }
