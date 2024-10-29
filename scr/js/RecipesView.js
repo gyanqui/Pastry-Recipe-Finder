@@ -2,8 +2,13 @@ import { createElement } from './utils';
 import { getFeaturedRecipes, getRecipeDetails } from './APIHandler';
 
 function RecipesView() {
-  const title = createElement('h2', { textContent: 'Explore All Our Recipes' });
-  const recipesSection = createElement('div', { className: 'recipes-section' });
+  const title = createElement('h2', {
+    textContent: 'Explore All Our Recipes',
+    className: 'RV-title',
+  });
+  const recipesSection = createElement('div', {
+    className: 'RV-recipes-section',
+  });
 
   getFeaturedRecipes().then((recipes) => {
     const recipesPromises = recipes.map((recipe) =>
@@ -19,33 +24,44 @@ function RecipesView() {
           )
           .filter((ingredient) => ingredient.split(': ')[1] !== '');
 
-        const recipeCard = createElement('div', { className: 'recipe-card' }, [
-          createElement('h3', { textContent: recipe.strMeal }),
-          createElement('img', {
-            src: recipe.strMealThumb,
-            alt: recipe.strMeal,
-          }),
-          createElement('button', {
-            className: 'favorite-btn',
-            innerHTML: '&#10084;', // Heart icon
-            onclick: (event) => toggleFavorite(recipe, event.target),
-          }),
-          createElement('p', {
-            textContent: 'Ingredients: ',
-            className: 'ingredientH',
-          }),
-          createElement(
-            'ul',
-            {},
-            ingredientsList.map((ingredient) =>
-              createElement('li', { textContent: ingredient })
-            )
-          ),
-          createElement('p', {
-            textContent: recipe.strInstructions,
-            className: 'recipe-instructions',
-          }),
-        ]);
+        const recipeCard = createElement(
+          'div',
+          { className: 'RV-recipe-card' },
+          [
+            createElement('h3', {
+              textContent: recipe.strMeal,
+              className: 'RV-recipe-title',
+            }),
+            createElement('img', {
+              src: recipe.strMealThumb,
+              alt: recipe.strMeal,
+              className: 'RV-recipe-image',
+            }),
+            createElement('button', {
+              className: 'favorite-btn',
+              innerHTML: '&#10084;', // Heart icon
+              onclick: (event) => toggleFavorite(recipe, event.target),
+            }),
+            createElement('p', {
+              textContent: 'Ingredients: ',
+              className: 'RV-ingredientH',
+            }),
+            createElement(
+              'ul',
+              {},
+              ingredientsList.map((ingredient) =>
+                createElement('li', {
+                  textContent: ingredient,
+                  className: 'RV-ingredient-item',
+                })
+              )
+            ),
+            createElement('p', {
+              textContent: recipe.strInstructions,
+              className: 'RV-recipe-instructions',
+            }),
+          ]
+        );
 
         recipesSection.appendChild(recipeCard);
       });
@@ -66,11 +82,7 @@ function toggleFavorite(recipe, button) {
   }
 
   localStorage.setItem('favorites', JSON.stringify(favorites));
-
-  // Apply the shake animation to the clicked button only
   button.classList.add('shake');
-
-  // Remove the animation class after it's done to allow re-triggering
   setTimeout(() => button.classList.remove('shake'), 500);
 }
 

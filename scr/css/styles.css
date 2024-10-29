@@ -129,6 +129,7 @@ nav {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .recipe-card {
@@ -246,4 +247,193 @@ footer a {
 
 footer a {
   text-decoration: none;
+}
+
+/* Recipe View Styles */
+.RV-title {
+  text-align: center;
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+
+.RV-recipes-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.RV-recipe-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.RV-recipe-title {
+  font-size: var(--large-font);
+  color: var(--primary-color);
+}
+
+.RV-recipe-image {
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+  padding: 15px;
+}
+
+.RV-ingredientH {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: var(--dark-grey);
+}
+
+.RV-ingredient-item {
+  text-align: left;
+  color: var(--dark-grey);
+}
+
+.RV-recipe-instructions {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 0 0 25px;
+  }
+
+  /* Navigation */
+  header .heading {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+
+  nav {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  nav a {
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+  }
+
+  .hero {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .title-heading,
+  h2 {
+    font-size: 4rem;
+    margin-bottom: 40px;
+  }
+
+  .intro-paragraph {
+    padding: 0 200px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding-bottom: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  footer p,
+  footer span,
+  footer a {
+    font-size: 1.3rem;
+  }
+
+  .RV-recipe-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    grid-template-areas:
+      'title ingredientH'
+      'image ingredients-list'
+      'button ingredients-list'
+      'instructions instructions';
+  }
+
+  .RV-title {
+    font-size: 4rem;
+  }
+
+  .RV-recipe-title {
+    grid-area: title;
+    font-size: 2rem;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .RV-recipe-image {
+    grid-area: image;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 8px;
+    padding: 0;
+  }
+
+  .favorite-btn {
+    grid-area: button;
+    align-self: start;
+    margin-top: 12px;
+    padding: 5px 60px;
+    margin: 0 150px;
+  }
+
+  .RV-ingredientH {
+    grid-area: ingredientH;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .RV-recipe-card ul {
+    margin-top: 0;
+    line-height: 1.8rem;
+  }
+
+  .RV-ingredients-list {
+    grid-area: ingredients-list;
+    font-size: 1rem;
+    color: var(--dark-grey);
+  }
+
+  .RV-recipe-instructions {
+    grid-area: instructions;
+    font-size: 1.5rem;
+    color: var(--dark-grey);
+    line-height: 2rem;
+    text-align: center;
+    padding: 0 85px;
+  }
+
+  .RV-ingredient-item {
+    font-size: var(--large-font);
+  }
+
+  .favorite-card {
+    max-width: 450px;
+  }
 }
