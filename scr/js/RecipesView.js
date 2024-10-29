@@ -24,12 +24,11 @@ function RecipesView() {
           createElement('img', {
             src: recipe.strMealThumb,
             alt: recipe.strMeal,
-            style: 'max-width: 200px; height: auto;',
           }),
           createElement('button', {
             className: 'favorite-btn',
             innerHTML: '&#10084;', // Heart icon
-            onclick: () => toggleFavorite(recipe),
+            onclick: (event) => toggleFavorite(recipe, event.target),
           }),
           createElement('p', {
             textContent: 'Ingredients: ',
@@ -56,14 +55,23 @@ function RecipesView() {
   return createElement('div', {}, [title, recipesSection]);
 }
 
-function toggleFavorite(recipe) {
+function toggleFavorite(recipe, button) {
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-  if (favorites.some((fav) => fav.idMeal === recipe.idMeal)) {
+  const isFavorite = favorites.some((fav) => fav.idMeal === recipe.idMeal);
+
+  if (isFavorite) {
     favorites = favorites.filter((fav) => fav.idMeal !== recipe.idMeal);
   } else {
     favorites.push(recipe);
   }
+
   localStorage.setItem('favorites', JSON.stringify(favorites));
+
+  // Apply the shake animation to the clicked button only
+  button.classList.add('shake');
+
+  // Remove the animation class after it's done to allow re-triggering
+  setTimeout(() => button.classList.remove('shake'), 500);
 }
 
 export default RecipesView;
