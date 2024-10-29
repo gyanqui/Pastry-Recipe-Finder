@@ -147,14 +147,13 @@ nav {
   font-size: 1.2em;
 }
 
-
 .recipe-card img {
   border-radius: 4px;
   max-width: 100%;
   height: auto;
   margin: 8px 0;
-  transition: transform 0.3s ease; 
-  cursor: pointer; 
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .recipe-card img:hover {
