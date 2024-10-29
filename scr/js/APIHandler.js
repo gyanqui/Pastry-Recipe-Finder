@@ -13,11 +13,3 @@ export async function getRecipeDetails(id) {
   const data = await response.json();
   return data.meals[0];
 }
-
-export async function getCategoryRecipes() {
-  const response = await fetch(
-    'https://www.themealdb.com/api/json/v1/1/categories.php'
-  );
-  const data = await response.json();
-  return data.categories;
-}
