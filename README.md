@@ -1,4 +1,4 @@
-# Pastry-Recipe-Finder
+# PastryPal
 
 ## Randomized production URL
 
